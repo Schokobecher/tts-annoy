@@ -1,0 +1,60 @@
+{
+  "name": "tts-annoy",
+  "description": "Receive messages over the Internet and output them via TTS (Google Translate)",
+  "version": "0.0.1",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.1",
+    "google-tts-api": "^0.0.1",
+    "log4js": "^2.1.0",
+    "play-sound": "^1.1.1",
+    "uuid": "^3.1.0",
+    "validator": "^8.0.0"
+  },
+  "keywords": [
+    "TTS",
+    "Text-to-Speech",
+    "Google-TTS"
+  ],
+  "author": [
+    {
+      "name": "Pierre Dennert",
+      "email": "pierre@dennert.me",
+      "web": "https://dennert.me"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Pierre Dennert",
+      "email": "pierre@dennert.me",
+      "web": "https://dennert.me"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Pierre Dennert",
+      "email": "pierre@dennert.me",
+      "web": "https://dennert.me"
+    }
+  ],
+  "demos": [
+    "https://annoy.dennert.me"
+  ],
+  "repository": [
+    {
+      "type": "git",
+      "url": "https://github.com/Schokobecher/tts-annoy.git"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Schokobecher/tts-annoy/issues"
+  },
+    "scripts": {
+    "test": "./server.js"
+  },
+  "homepage": "https://github.com/Schokobecher/tts-annoy"
+}
