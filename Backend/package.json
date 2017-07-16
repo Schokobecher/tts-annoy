@@ -53,8 +53,5 @@
   "bugs": {
     "url": "https://github.com/Schokobecher/tts-annoy/issues"
   },
-    "scripts": {
-    "test": "./server.js"
-  },
   "homepage": "https://github.com/Schokobecher/tts-annoy"
 }
