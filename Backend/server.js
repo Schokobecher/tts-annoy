@@ -48,6 +48,9 @@ const uuid = require('uuid/v4');
 // Server started
 logger.info('Server running on ' + port);
 
+app.get('/:message', function(req, res) {
+  res.send('HeLlO!');
+});
 
 app.use(function(req, res, next) {
 	// Set header options
@@ -56,8 +59,11 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Credentials', true);
 
 	
-	// Request was using GET method
-    if (req.method == "GET") {
+	// Request was made using ?message=
+		if (req.query.message) {
+			
+		var IPfromRequest = req.ip;
+		remoteIP = IPfromRequest.replace(/^.*:/, '');
 		
 		var msg = req.sanitize('message').escape();
 		// TODO: second 'undefined' GET request when calling the backend direcly? We work around it for now...
@@ -70,8 +76,7 @@ app.use(function(req, res, next) {
 
         var fileuuid = uuid();
         var file = fs.createWriteStream("./media/" + fileuuid + ".mp3");
-        res.end('Very Nice!')
-        logger.info(msg + " via GET received.");
+        logger.info(msg + " from " + remoteIP +" received.");
 		// Google magic
         googleTTS(msg, 'en', 1) // speed normal = 1 (default), slow = 0.24
             .then(function(url) {
@@ -84,15 +89,12 @@ app.use(function(req, res, next) {
 					// Play the .mp3
                     player.play("./media/" + fileuuid + ".mp3", (err) => {
                         if (err) logger.fatal(`Could not play sound: ${err}`);
-                        logger.info("played file " + fileuuid);
+                        logger.info("played file " + fileuuid + ".mp3");
                     });
                 })
             });
-    } else if (req.method == "POST") { // POST Request
-        logger.info("received POST request.");
-
-    } else {
-        logger.error("Undefined request."); // Something else...
+		res.end('Very Nice!')
+    }  else {
+        return;
     }
-
 });
