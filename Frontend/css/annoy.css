@@ -1,31 +1,38 @@
 body {
-  background: #F6F6F6; }
+	background: #F6F6F6;
+}
 
 h1 {
-  padding-top: 100px;
-  font-size: 70px;
-  color: #464646; }
+	padding-top: 100px;
+	font-size: 70px;
+	color: #464646;
+}
 
 p {
-  font-size: 20px;
-  color: #464646; }
+	font-size: 20px;
+	color: #464646;
+}
 
 .bottom-right {
-  position: fixed;
-  bottom: 0;
-  right: 0; }
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
 
 .bottom-left {
-  position: fixed;
-  bottom: 0;
-  left: 0; }
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
 
 .inputControl {
-  font-size: 50px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 100%; }
+	font-size: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+}
 
 .btn {
-  font-size: 26px;
-  margin-bottom: 40px; }
+	font-size: 26px;
+	margin-bottom: 40px;
+}
