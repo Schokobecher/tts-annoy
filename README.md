@@ -41,7 +41,7 @@ npm install
 
 #### Frontend
 
-The frontend is written in HTML and Javascript, so all yo uneed to do is upload it to a webserver of your choice.
+The frontend is written in HTML and Javascript, so all you need to do, is upload it to a webserver of your choice.
 Then edit
 
 ```
